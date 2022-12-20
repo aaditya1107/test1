@@ -1,0 +1,11 @@
+steps:
+  - name: 'gcr.io/cloud-builders/gcloud'
+    id: 'commitMessageCheck'
+    waitFor: ['-']
+    entrypoint: 'bash'
+    args:
+    - '-c'
+    - |
+      #!/bin/bash
+      set +x
+      echo "Commit message: ${_COMMIT_MESSAGE}. Branch name: $BRANCH_NAME"
