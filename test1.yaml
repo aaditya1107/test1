@@ -1,7 +1,7 @@
 steps:
   - name: 'gcr.io/cloud-builders/gcloud'
     id: 'commitMessageCheck'
-    waitFor: ['-']
+  //  waitFor: ['-']
     entrypoint: 'bash'
     args:
     - '-c'
